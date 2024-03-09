@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Song Generator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+        }
+        .button {
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        h3 {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="left">
+        <button class="button" onclick="openRandomLink()">Generate Random Song</button>
+    </div>
+    <div id="right">
+        <h3>Random Song Generator</h3>
+        <p>Lick the button to listen to a song from the 90s!</p>
+    </div>
+
+    <script>
+        function openRandomLink() {
+            // Array of YouTube video links
+            var videoLinks = [
+                "https://www.youtube.com/watch?v=IPTHlmhtg8s&ab_channel=AliceInChainsVEVO",
+                "https://www.youtube.com/watch?v=Ge3r3EF8dGE&ab_channel=NirvanaVEVO",
+                "https://www.youtube.com/watch?v=efc7njKAfgo&ab_channel=SoundgardenVEVO",
+                "https://www.youtube.com/watch?v=qgaRVvAKoqQ&ab_channel=PearljamVEVO",
+                "https://www.youtube.com/watch?v=Vbu_K41efvY&ab_channel=TheSmashingPumpkins-Topic",
+                "https://www.youtube.com/watch?v=5QtvpucmEWA&ab_channel=PearljamVEVO",
+                "https://www.youtube.com/watch?v=LLjFoIOyCfw&ab_channel=PearljamVEVO",
+                "https://www.youtube.com/watch?v=ySzrJ4GRF7s&ab_channel=SoundgardenVEVO",
+                "https://www.youtube.com/watch?v=9EKi2E9dVY8&ab_channel=AliceInChainsVEVO",
+                "https://www.youtube.com/watch?v=6ywIjjj3YuA&ab_channel=TheSmashingPumpkins-Topic",
+                
+            ];
+
+            // Generate a random index
+            var randomIndex = Math.floor(Math.random() * videoLinks.length);
+
+            // Open the random link in a new tab
+            window.open(videoLinks[randomIndex], '_blank');
+        }
+    </script>
+</body>
+</html>
